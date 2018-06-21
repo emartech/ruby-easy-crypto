@@ -7,6 +7,7 @@ module EasyCrypto
     ITERATION_COUNT = 10_000
     KEY_LENGTH = 32
     HASH_ALGO = 'sha256'
+    DEFAULT_SALT_LENGTH = 12
 
     attr_reader :key, :salt
 
@@ -15,7 +16,7 @@ module EasyCrypto
       @salt = salt
     end
 
-    def self.generate(password, salt_length)
+    def self.generate(password, salt_length = DEFAULT_SALT_LENGTH)
       salt = OpenSSL::Random.random_bytes(salt_length)
       key = OpenSSL::KDF.pbkdf2_hmac(
         password,
