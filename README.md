@@ -1,4 +1,4 @@
-# EasyCrypto
+# EasyCrypto [![Build Status](https://travis-ci.org/emartech/ruby-easy-crypto.svg?branch=master)](https://travis-ci.org/emartech/ruby-easy-crypto)
 
 Provides simple wrappers around the openssl crypto implementation. 
 
@@ -20,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Encrypt with previously derived key
+
+```ruby
+require 'easycrypto'
+
+key_password = 'secret password'
+plain_text = 'data to encrypt ...'
+
+ecrypto = EasyCrypto::Crypto.new
+
+key = EasyCrypto::Key.generate(key_password)
+ecrypto.encrypt_with_key(key, plain_text)
+```
 
 ## License
 
