@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    easy-crypto (0.0.1)
+    easy-crypto (0.0.2)
       openssl (~> 2.1.1, >= 2.1.1)
 
 GEM
