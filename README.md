@@ -1,4 +1,4 @@
-# EasyCrypto [![Build Status](https://travis-ci.org/emartech/ruby-easy-crypto.svg?branch=master)](https://travis-ci.org/emartech/ruby-easy-crypto)
+# EasyCrypto [![Build Status](https://travis-ci.org/emartech/ruby-easy-crypto.svg?branch=master)](https://travis-ci.org/emartech/ruby-easy-crypto) [![Gem Version](https://badge.fury.io/rb/easy-crypto.svg)](https://badge.fury.io/rb/easy-crypto)
 
 Provides simple wrappers around the openssl crypto implementation. 
 
