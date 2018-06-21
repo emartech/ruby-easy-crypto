@@ -1,5 +1,5 @@
 module EasyCrypto
-  require 'escher/version'
+  require 'easycrypto/version'
   require 'easycrypto/key'
   require 'easycrypto/crypto'
 end
