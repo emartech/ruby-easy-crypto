@@ -16,7 +16,7 @@ module EasyCrypto
 
       encrypted = cipher.update(plaintext) + cipher.final
 
-      Base64.encode64(key.salt + iv + encrypted + cipher.auth_tag)
+      Base64.strict_encode64(key.salt + iv + encrypted + cipher.auth_tag)
     end
 
     private
