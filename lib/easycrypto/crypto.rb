@@ -10,6 +10,7 @@ module EasyCrypto
 
     def encrypt_with_key(key, plaintext)
       validate_key_type(key)
+      validate_plaintext(plaintext)
 
       iv = OpenSSL::Random.random_bytes(Crypto::IV_LEN)
       cipher = create_cipher(key, iv)
@@ -22,7 +23,12 @@ module EasyCrypto
     private
 
     def validate_key_type(key)
-      raise TypeError 'key must have Key type' unless key.is_a?(EasyCrypto::Key)
+      raise TypeError, 'key must have Key type' unless key.is_a?(EasyCrypto::Key)
+    end
+
+    def validate_plaintext(plaintext)
+      raise TypeError, 'Encryptable data must be a string' unless plaintext.is_a?(String)
+      raise ArgumentError, 'Encryptable data must not be empty' if plaintext.empty?
     end
 
     def create_cipher(key, iv)
