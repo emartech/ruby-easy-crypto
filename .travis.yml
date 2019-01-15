@@ -6,6 +6,7 @@ before_install: gem install bundler -v 1.16.1
 deploy:
   provider: rubygems
   api_key: ${RUBYGEMS_API_KEY}
+  gem: easy-crypto
   gemspec: easy-crypto.gemspec
   skip_cleanup: true
   on:
