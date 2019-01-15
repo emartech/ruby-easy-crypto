@@ -31,7 +31,7 @@ plaintext = 'some data'
 ecrypto = EasyCrypto::Crypto.new
 
 encrypted = ecrypto.encrypt(password, plaintext)
-decrypted = ecrypto.encrypt(password, encrypted)
+decrypted = ecrypto.decrypt(password, encrypted)
 
 decrypted == plaintext
 ```
