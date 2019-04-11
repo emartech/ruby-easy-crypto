@@ -22,12 +22,12 @@ module EasyCrypto
     end
 
     def self.generate_with_salt(password, salt)
-      key = OpenSSL::KDF.pbkdf2_hmac(
+      key = OpenSSL::PKCS5.pbkdf2_hmac(
         password,
-        salt: salt,
-        iterations: Key::ITERATION_COUNT,
-        length: Key::KEY_LENGTH,
-        hash: Key::HASH_ALGO
+        salt,
+        Key::ITERATION_COUNT,
+        Key::KEY_LENGTH,
+        Key::HASH_ALGO
       )
 
       new(key, salt)
