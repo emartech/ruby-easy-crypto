@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    easy-crypto (0.2.1)
+    easy-crypto (0.2.2)
 
 GEM
   remote: https://rubygems.org/
