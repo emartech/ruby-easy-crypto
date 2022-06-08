@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    easy-crypto (0.2.3)
+    easy-crypto (0.2.4)
 
 GEM
   remote: https://rubygems.org/
@@ -29,7 +29,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 2.2.23)
+  bundler (~> 2.3.15)
   easy-crypto!
   jruby-openssl (~> 0.9)
   openssl (~> 2.1.2)
@@ -37,4 +37,4 @@ DEPENDENCIES
   rspec (~> 3.0)
 
 BUNDLED WITH
-   2.2.23
+   2.3.15
